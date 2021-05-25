@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-workflow-definition-implementation
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -114,3 +114,4 @@ class SubscriptionWorkflow implements SubscriptionWorkflowInterface
         return $this->workflowCustomer->getSubscription()->getBillingPeriodCharge();
     }
 }
+// @@@SNIPEND

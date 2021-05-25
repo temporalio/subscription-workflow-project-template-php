@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-get-billing-info-query
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -41,3 +41,4 @@ class QueryBillingInfoCommand extends Command
         return self::SUCCESS;
     }
 }
+// @@@SNIPEND

@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-worker-starter
 declare(strict_types=1);
 
 use Temporal\SampleUtils\DeclarationLocator;
@@ -29,3 +29,4 @@ foreach ($declarations->getActivityTypes() as $activityType) {
 
 // start primary loop
 $factory->run();
+// @@@SNIPEND

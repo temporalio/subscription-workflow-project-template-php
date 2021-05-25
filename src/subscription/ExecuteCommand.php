@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-workflow-execution-starter
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -43,3 +43,4 @@ class ExecuteCommand extends Command
         return self::SUCCESS;
     }
 }
+// @@@SNIPEND

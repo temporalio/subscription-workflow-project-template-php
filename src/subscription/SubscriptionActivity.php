@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-activity-definition-implementation
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -17,7 +17,7 @@ class SubscriptionActivity implements SubscriptionActivityInterface
         $this->logger = new Logger();
     }
 
-    public function sendWelcomeEmail(int $customerId) : string 
+    public function sendWelcomeEmail(int $customerId) : string
     {
         $this->logger->info("sending welcome email to: " . $customerId);
         return "sending welcome email to: " . $customerId;
@@ -45,7 +45,8 @@ class SubscriptionActivity implements SubscriptionActivityInterface
 
     public function sendSubscriptionOverEmail(int $customerId) : string {
         $this->logger->info("sending subscription over email to: " . $customerId);
-        return "sending subscription over email to: " . $customerId;  
+        return "sending subscription over email to: " . $customerId;
     }
 
 }
+// @@@SNIPEND

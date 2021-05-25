@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-update-billing-charge-signal
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -29,3 +29,4 @@ class UpdateBillingCycleChargeCommand extends Command
         return self::SUCCESS;
     }
 }
+// @@@SNIPEND

@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-cancel-subscription-signal
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -29,3 +29,4 @@ class CancelSubscriptionCommand extends Command
         return self::SUCCESS;
     }
 }
+// @@@SNIPEND

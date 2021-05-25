@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-customer-model
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -65,3 +65,4 @@ class Customer
         $this->subscription = $subscription;
     }
 }
+// @@@SNIPEND

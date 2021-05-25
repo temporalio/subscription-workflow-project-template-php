@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-subscription-model
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -55,3 +55,4 @@ class Subscription
         $this->billingPeriodCharge = $billingPeriodCharge;
     }
 }
+// @@@SNIPEND
