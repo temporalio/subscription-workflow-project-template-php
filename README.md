@@ -2,7 +2,7 @@
 <!-- @@@SNIPSTART subscription-php-readme -->
 This project template illustrates the design pattern for subscription style business logic.
 
-## Setup
+**Setup**
 
 Run the Temporal Server:
 
@@ -19,7 +19,7 @@ composer install
 ./rr serve
 ```
 
-## Start
+**Start**
 
 Start the Workflow Execution for a single customer with the Id of "Id-0".
 
@@ -27,7 +27,7 @@ Start the Workflow Execution for a single customer with the Id of "Id-0".
 php app.php subscription
 ```
 
-## Get billing info
+**Get billing info**
 
 You can Query the Workflow Execution for the customer's billing information.
 The current billing period and the charge amount will be returned.
@@ -38,7 +38,7 @@ php app.php querybillinginfo
 
 Run this multiple times to see the billing period number and charge amount change over the course of the Workflow Execution.
 
-## Update billing
+**Update billing**
 
 You can also send a Signal to the Workflow Execution to update the billing cycle cost to 300.
 
@@ -46,7 +46,7 @@ You can also send a Signal to the Workflow Execution to update the billing cycle
 php app.php updatecharge
 ```
 
-## Cancel subscription
+**Cancel subscription**
 
 You can send a Signal to the Workflow Execution to cancel the subscription.
 The Workflow Execution will complete after the current billing period.
