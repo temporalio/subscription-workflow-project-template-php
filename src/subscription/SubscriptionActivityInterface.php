@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-activity-definition-interface
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -28,3 +28,4 @@ interface SubscriptionActivityInterface
     public function sendSubscriptionOverEmail(int $customerId) : string;
 
 }
+// @@@SNIPEND

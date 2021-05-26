@@ -1,10 +1,10 @@
-# Temporal Subscription Workflow Template - PHP
+# Subscription Workflow Project Template in PHP
+<!-- @@@SNIPSTART subscription-php-readme -->
+This project template illustrates the design pattern for subscription style business logic.
 
-Temporal customer subscription Workflow example. 
+**Setup**
 
-### Setup
-
-### Run Temporal server
+Run the Temporal Server:
 
 ```bash
 git clone https://github.com/temporalio/docker-compose.git
@@ -12,61 +12,48 @@ cd docker-compose
 docker-compose up
 ```
 
-### Start the example
+Start the RoadRunner Server:
 
-Start RoadRunner server:
-
-```text
+```bash
 composer install
 ./rr serve
 ```
 
-Start the Workflow executions.
-This will start the Subscription Workflow for 1 customers with id "Id-0"
+**Start**
 
-```text
+Start the Workflow Execution for a single customer with the Id of "Id-0".
+
+```bash
 php app.php subscription
 ```
 
-### Querying billing information:
+**Get billing info**
 
-You can query billing information for the customer after the workflows have started with:
+You can Query the Workflow Execution for the customer's billing information.
+The current billing period and the charge amount will be returned.
 
-```text
+```bash
 php app.php querybillinginfo  
 ```
 
-This will return the current Billing Period and the current Billing Period Charge amount for the customers.
+Run this multiple times to see the billing period number and charge amount change over the course of the Workflow Execution.
 
-You can run this multiple times to see the billing period number increase during 
-workflow execution
+**Update billing**
 
-### Update billing cycle cost:
+You can also send a Signal to the Workflow Execution to update the billing cycle cost to 300.
 
-You can also update the billing cycle cost for all customers while the workflow is running:
-
-```text
-php app.php updatecharge 
+```bash
+php app.php updatecharge
 ```
 
-This will update the billing charge amount for the customers for their next billing cycle to 300.
+**Cancel subscription**
 
-You can use 
+You can send a Signal to the Workflow Execution to cancel the subscription.
+The Workflow Execution will complete after the current billing period.
 
-```text
-php app.php querybillinginfo  
-``` 
-
-again to see the billing charge update to 300 for the next billing period
-
-### Cancel subscription
-
-You can cancel subscriptions for the customers, which completes 
-workflow execution after the currently executing billing period:
-
-```text
+```bash
 php app.php cancelsubscription
 ```
 
-After running this, check out the Temporal Web UI and see that the 
-subscription workflow is in the "Completed" status.
+After running this, check out the [Temporal Web UI](http://localhost:8088/) to see that the Workflow Execution has a "Completed" status.
+<!-- @@@SNIPEND -->

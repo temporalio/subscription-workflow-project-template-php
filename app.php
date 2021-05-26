@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-app
 declare(strict_types=1);
 
 use Temporal\SampleUtils\DeclarationLocator;
@@ -27,3 +27,4 @@ foreach ($declarations->getCommands() as $command) {
 }
 
 $app->run();
+// @@@SNIPEND

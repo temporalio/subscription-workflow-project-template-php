@@ -1,5 +1,5 @@
 <?php
-
+// @@@SNIPSTART subscription-php-workflow-definition-interface
 declare(strict_types=1);
 
 namespace Temporal\Samples\Subscription;
@@ -36,3 +36,4 @@ interface SubscriptionWorkflowInterface
     #[QueryMethod]
     public function getBillingPeriodChargeAmount(): int;
 }
+// @@@SNIPEND
